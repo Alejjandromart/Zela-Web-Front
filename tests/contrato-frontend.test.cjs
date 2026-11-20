@@ -101,15 +101,21 @@ test('comentários distintos publicados no mesmo instante mantêm seus identific
   assert.equal(run("listarComentariosChamado('000131').length"), 2);
 });
 
-test('eventos novos identificam a origem humana e a autoria da demonstração', () => {
+test('eventos novos identificam autoria mesmo quando registrados no mesmo instante', () => {
   const run = contexto();
+  run("Date = class extends Date { constructor(...args) { super(...(args.length ? args : ['2026-11-20T12:00:00.000Z'])); } }; undefined");
   run("sessionStorage.setItem('zela-perfil-admin','ativo')");
   const equipe = run("salvarEquipeChamado('000131',{principal_id:'joao',colaborador_ids:[],equipe_versao:0})");
   assert.equal(equipe.historico.at(-1).autor.nome, 'Administrador');
   assert.equal(equipe.historico.at(-1).origem, 'humana');
   run("sessionStorage.setItem('zela-perfil-admin','inativo'); sessionStorage.setItem('zela-perfil-tecnico','joao')");
   run("salvarEventoServico(listarServicos().find(s=>s.numero==='000131'),'Atendimento iniciado',{estado:'andamento'})");
-  const estado = run("listarServicos().find(s=>s.numero==='000131').historico.at(-1)");
+  const eventos = run("listarServicos().find(s=>s.numero==='000131').historico");
+  const alteracoes = eventos.filter(evento => evento.texto === 'Atendimento iniciado');
+  assert.equal(alteracoes.length, 1);
+  const estado = alteracoes[0];
+  assert.equal(estado.ocorrido_em, equipe.historico.at(-1).ocorrido_em);
+  assert.equal(eventos.find(evento => evento.tipo === 'troca_principal').autor.nome, 'Administrador');
   assert.equal(estado.autor.nome, 'João Pereira');
   assert.equal(estado.origem, 'humana');
 });
