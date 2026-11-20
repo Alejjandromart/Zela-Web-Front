@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F0F6FF">
+  <title>Início | Zela</title>
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/inicio.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="brand" href="./index.html" aria-label="Zela, início">zela.</a>
+
+      <nav class="navigation" aria-label="Navegação principal">
+        <a class="navigation__item" href="./index.html" aria-current="page">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m3 10 9-7 9 7M5 9v12h14V9M9 21v-7h6v7"/>
+          </svg>
+          Início
+        </a>
+        <a class="navigation__item" href="./html/solicitante/meus-chamados.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/>
+          </svg>
+          Chamados
+        </a>
+        <a class="navigation__item" href="./html/solicitante/mais.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 21v-1a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v1"/>
+          </svg>
+          Mais
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container home" id="conteudo" tabindex="-1">
+    <section class="welcome" aria-labelledby="welcome-title">
+      <div class="section-heading">
+        <h1 id="welcome-title">Olá! Como podemos ajudar?</h1>
+        <p>Sua solicitação começa aqui.</p>
+      </div>
+
+      <a class="request-card" href="./html/solicitante/novo-chamado.html">
+        <span class="request-card__art" aria-hidden="true">
+          <img src="./assestes/06_manutencao_campus.svg" width="640" height="460" alt="">
+        </span>
+        <svg class="request-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 5v14M5 12h14"/>
+        </svg>
+        <strong>Solicitar manutenção</strong>
+        <span>Informe um problema no campus</span>
+      </a>
+    </section>
+
+    <!-- Tela de chamados recentes -->
+    <section class="recent" aria-labelledby="recent-title">
+      <div class="section-heading">
+        <h2 id="recent-title">Seus chamados recentes</h2>
+        <p>Acompanhe as últimas solicitações.</p>
+      </div>
+
+      <ul class="ticket-list">
+        <li class="ticket">
+          <div class="ticket__icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 8h12a3 3 0 1 0-3-3M2 13h18a2 2 0 1 1-2 3M4 18h8a2 2 0 1 1-2 3"/>
+            </svg>
+          </div>
+          <div class="ticket__summary">
+            <h3><a href="./html/solicitante/detalhes-chamado.html?numero=000124">Ar-condicionado</a></h3>
+            <p>Bloco B · Sala 204</p>
+          </div>
+          <p class="status status--progress">Em atendimento</p>
+          <svg class="ticket__arrow" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14m-7-7 7 7-7 7"/>
+          </svg>
+        </li>
+        <li class="ticket">
+          <div class="ticket__icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 18h6m-5 3h4M8 14a7 7 0 1 1 8 0l-1 3H9z"/>
+            </svg>
+          </div>
+          <div class="ticket__summary">
+            <h3><a href="./html/solicitante/detalhes-chamado.html?numero=000125">Lâmpada queimada</a></h3>
+            <p>Laboratório 02</p>
+          </div>
+          <p class="status status--done">Concluído</p>
+          <svg class="ticket__arrow" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14m-7-7 7 7-7 7"/>
+          </svg>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Entrar | Zela</title>
+        <link rel="stylesheet" href="./css/tokens.css">
+        <link rel="stylesheet" href="./css/acesso.css">
+        <script src="./js/chamados.js" defer></script>
+        <script src="./js/registros.js" defer></script>
+        <script src="./js/acesso.js" defer></script>
+    </head>
+    <body>
+        <div class="access-shell">
+            <header class="login-header"><a class="access-brand" href="./index.html">zela.</a></header>
+            <main class="login-main">
+                <h1>Bem-vindo ao Zela</h1>
+                <p class="access-intro">Cuidar do campus ficou mais simples.</p>
+                <p class="access-note" id="cadastro-concluido" role="status" hidden>Cadastro simulado concluído. Você pode já acessar o Zela.</p>
+
+                <form class="access-form" id="form-login" method="post">
+                    <div class="access-field">
+                        <label for="email">E-mail</label>
+                        <input id="email" name="email" maxlength="254" type="email" autocomplete="username" placeholder="seu.email@ufam.edu.br" required>
+                    </div>
+
+                    <div class="access-field">
+                        <label for="senha">Senha</label>
+                        <input id="senha" name="senha" type="password" autocomplete="current-password" placeholder="Digite sua senha" minlength="4" maxlength="8" required>
+                    </div>
+
+                    <button class="access-button" type="submit">Entrar</button>
+                </form>
+                <a class="access-link" href="./cadastro.html">Criar uma conta</a>
+            </main>
+
+            <footer class="access-footer">
+                <p>Sistema de manutenção do campus</p>
+                <p>&copy; 2026 Zela.</p>
+            </footer>
+        </div>
+    </body>
+</html>
