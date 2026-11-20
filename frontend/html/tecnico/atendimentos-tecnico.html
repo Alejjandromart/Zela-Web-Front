@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f0f6ff">
+  <title>Atendimentos | Zela</title>
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/inicio.css">
+  <link rel="stylesheet" href="../../css/chamados.css">
+  <link rel="stylesheet" href="../../css/tecnico.css">
+  <script src="../../js/chamados.js" defer></script>
+  <script src="../../js/registros.js" defer></script>
+  <script src="../../js/equipes.js" defer></script>
+  <script src="../../js/chamado-ui.js" defer></script>
+  <script src="../../js/tecnico.js" defer></script>
+</head>
+<body data-pagina="lista">
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header tecnico-header">
+    <div class="site-header__inner container">
+      <a class="brand" href="./inicio-tecnico.html" aria-label="Zela, início do técnico">zela.</a>
+      <button class="tecnico-header__perfil" type="button" data-perfil aria-label="Abrir perfil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M4 21c0-5 16-5 16 0"/></svg></button>
+      <nav class="navigation" aria-label="Navegação do técnico">
+        <a class="navigation__item" href="./inicio-tecnico.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10l9-7 9 7M5 9v12h14V9M9 21v-7h6v7"/></svg> Início</a>
+        <a class="navigation__item" href="./atendimentos-tecnico.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg> Atendimentos</a>
+        <button class="navigation__item" type="button" data-perfil><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M4 21c0-5 16-5 16 0"/></svg> Perfil</button>
+      </nav>
+    </div>
+  </header>
+  <main class="container home ticket-page tecnico" id="conteudo" tabindex="-1">
+    <noscript>Ative o JavaScript para usar a área do técnico.</noscript>
+  </main>
+  <dialog class="tecnico-perfil" id="perfil" aria-labelledby="titulo-perfil">
+    <form method="dialog">
+      <h2 id="titulo-perfil">Perfil do técnico</h2>
+      <p class="ticket-intro" data-nome-perfil></p>
+      <button type="submit" class="request-primary request-primary--secondary" value="fechar">Fechar</button>
+      <a class="request-primary request-primary--secondary" href="../../login.html" data-sair>Sair</a>
+    </form>
+  </dialog>
+</body>
+</html>

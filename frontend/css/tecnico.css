@@ -1,0 +1,172 @@
+.tecnico-header__perfil {
+  position: absolute;
+  inset: calc(var(--space-4) + var(--space-2)) var(--space-6) auto auto;
+  display: grid;
+  place-items: center;
+  min-inline-size: 44px;
+  min-block-size: 44px;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--color-primary-hover);
+  cursor: pointer;
+}
+
+.tecnico-header button.navigation__item { cursor: pointer; }
+.tecnico-header .navigation { min-block-size: 5rem; }
+.tecnico-header .navigation__item { font-size: .8125rem; }
+.tecnico-header .navigation__item[aria-current] { color: var(--color-primary-hover); }
+
+.tecnico-detalhe-header {
+  border: 0;
+  background: var(--color-background);
+}
+
+.tecnico-detalhe-header .container { min-block-size: 4.5rem; }
+.tecnico-detalhe-header a { margin-inline-start: calc(-1 * var(--space-3)); }
+.tecnico-detalhe-header span { font-size: var(--font-lg); }
+
+.tecnico h2 { font-size: var(--font-lg); }
+.tecnico .detail-panel:first-child { margin-block-start: 0; }
+.tecnico .detail-panel { border: 0; overflow-wrap: anywhere; }
+.tecnico .detail-panel > p + p { margin-block-start: var(--space-2); }
+.tecnico .ticket-intro { margin-block-end: var(--space-8); }
+.tecnico:not([hidden]) .tecnico-resumo .status { display: inline-block; margin-block-start: var(--space-3); }
+.tecnico-resumo h1 { font-size: var(--font-xl); }
+.tecnico-resumo .ticket-number { margin-block: 0 var(--space-2); }
+.tecnico-texto { color: var(--color-text-secondary); font-size: var(--font-sm); white-space: pre-wrap; }
+
+.tecnico-ilustrado {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(5rem, 24vw, 9rem);
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.tecnico-ilustracao {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+}
+
+.tecnico-inicio { margin-block-end: var(--space-4); }
+.tecnico .tecnico-inicio .ticket-intro { margin-block-end: 0; }
+.tecnico-lista .tickets-empty .tecnico-ilustracao {
+  inline-size: min(100%, 10rem);
+  margin: 0 auto var(--space-2);
+}
+
+.tecnico-metricas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin: 0 0 var(--space-8);
+}
+
+.tecnico-metrica {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-block-size: 5.5rem;
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  background: var(--color-primary-soft);
+  color: var(--color-text-secondary);
+  font-size: var(--font-sm);
+  text-decoration: none;
+}
+
+.tecnico-metrica:hover { box-shadow: inset 0 0 0 1px var(--color-primary); }
+.tecnico-metrica + .tecnico-metrica { background: var(--status-progress-bg); }
+.tecnico-metrica strong { line-height: 1.15; color: var(--color-text); font-size: var(--font-display); font-weight: 800; }
+.tecnico-lista-titulo { margin-block-end: var(--space-4); }
+.tecnico-busca { margin-block-end: var(--space-4); }
+.tecnico-busca + .ticket-filters { margin-block-start: 0; }
+
+.tecnico-lista .ticket {
+  grid-template-areas: "icon summary arrow" "icon status arrow";
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  min-block-size: 0;
+  gap: var(--space-1) var(--space-3);
+  padding: var(--space-3);
+  border-color: transparent;
+  color: inherit;
+  text-decoration: none;
+}
+
+.tecnico-lista .ticket:hover { border-color: var(--color-primary); }
+.tecnico-lista .ticket__icon { inline-size: 2.5rem; block-size: 2.5rem; }
+.tecnico-lista .ticket__summary { overflow-wrap: anywhere; }
+.tecnico-lista .ticket__summary h3 { font-size: var(--font-md); }
+.tecnico-lista .ticket__arrow { color: var(--color-primary-hover); }
+.tecnico-lista .status { justify-self: start; font-size: .8125rem; }
+.tecnico-acoes { display: grid; gap: var(--space-3); margin-block-start: var(--space-6); }
+.tecnico-acoes:empty, .tecnico-feedback:empty { display: none; }
+.tecnico-feedback { margin-block: var(--space-3); color: var(--color-text-secondary); }
+.tecnico .request-comment-form { margin: 0; }
+.tecnico .request-comment-form label { display: block; }
+.tecnico .request-comment-form textarea { margin-block-start: var(--space-2); }
+.tecnico .request-comment-form button:disabled { opacity: .65; cursor: wait; }
+.tecnico .request-timeline li { min-block-size: 3.75rem; }
+.tecnico .request-timeline span { font-size: var(--font-sm); }
+.tecnico .request-timeline strong { font-weight: 500; white-space: pre-wrap; }
+.tecnico-foto { margin-block-start: var(--space-4); }
+.tecnico-foto input { display: block; inline-size: 100%; margin-block-start: var(--space-2); font: inherit; }
+.tecnico-foto input::file-selector-button {
+  padding: var(--space-2) var(--space-3);
+  border: 0;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-soft);
+  color: var(--color-primary-hover);
+  font: inherit;
+  cursor: pointer;
+}
+.tecnico-foto__previa {
+  display: block;
+  max-inline-size: 100%;
+  max-block-size: 8rem;
+  margin-block: var(--space-3);
+  border-radius: var(--radius-md);
+  object-fit: contain;
+}
+.tecnico .tecnico-conclusao { margin-block-start: var(--space-3); }
+.tecnico .tecnico-foto__remover {
+  inline-size: auto;
+  min-block-size: 44px;
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-primary-soft);
+  color: var(--color-primary-hover);
+  font-size: var(--font-sm);
+}
+.tecnico-foto [hidden] { display: none; }
+.tecnico-papel {
+  display: inline-block;
+  margin-inline-start: var(--space-2);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  background: var(--color-primary-soft);
+  color: var(--color-primary-hover);
+  font-size: var(--font-sm);
+  font-weight: 600;
+}
+.tecnico-perfil {
+  inline-size: min(calc(100% - 2 * var(--space-6)), 24rem);
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+.tecnico-perfil::backdrop { background: rgb(30 41 59 / 35%); }
+.tecnico-perfil .request-primary + .request-primary { margin-block-start: var(--space-2); }
+
+@media (min-width: 52rem) {
+  .tecnico-header__perfil { display: none; }
+  .tecnico-header .navigation { min-block-size: auto; }
+  .tecnico-lista .ticket {
+    grid-template-areas: "icon summary status arrow";
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+    min-block-size: 5.5rem;
+  }
+}
