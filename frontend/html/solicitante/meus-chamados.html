@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meus chamados | Zela</title>
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/inicio.css">
+  <link rel="stylesheet" href="../../css/chamados.css">
+  <script src="../../js/chamados.js" defer></script>
+  <script src="../../js/registros.js" defer></script>
+  <script src="../../js/equipes.js" defer></script>
+  <script src="../../js/chamado-ui.js" defer></script>
+  <script src="../../js/acompanhar.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="brand" href="./index.html" aria-label="Zela, início">zela.</a>
+
+      <nav class="navigation" aria-label="Navegação principal">
+        <a class="navigation__item" href="./index.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m3 10 9-7 9 7M5 9v12h14V9M9 21v-7h6v7"/>
+          </svg>
+          Início
+        </a>
+        <a class="navigation__item" href="./meus-chamados.html" aria-current="page">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/>
+          </svg>
+          Chamados
+        </a>
+        <a class="navigation__item" href="./mais.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 21v-1a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v1"/>
+          </svg>
+          Mais
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container home ticket-page" id="conteudo">
+    <h1>Meus chamados</h1>
+    <p class="ticket-intro">Veja o andamento das solicitações.</p>
+    <label class="search-label" for="buscar-chamado">Buscar chamado</label>
+    <input class="ticket-search" id="buscar-chamado" type="search" placeholder="Título, local ou número">
+    <div class="ticket-filters" role="group" aria-label="Filtrar por estado">
+      <button type="button" data-estado="" aria-pressed="true">Todos</button>
+      <button type="button" data-estado="Aberto" aria-pressed="false">Abertos</button>
+      <button type="button" data-estado="Em atendimento" aria-pressed="false">Em atendimento</button>
+      <button type="button" data-estado="Concluído" aria-pressed="false">Concluídos</button>
+    </div>
+    <ul class="ticket-list" id="lista-chamados"></ul>
+    <div id="sem-resultados" class="tickets-empty" role="status" hidden>
+      <img src="../../assestes/02_sem_chamados.svg" width="640" height="460" alt="" loading="lazy">
+      <p>Nenhum chamado encontrado.</p>
+    </div>
+  </main>
+</body>
+</html>

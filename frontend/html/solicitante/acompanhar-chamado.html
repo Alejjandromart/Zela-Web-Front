@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detalhes do chamado | Zela</title>
+  <script>
+    const numero = new URLSearchParams(window.location.search).get('numero');
+    const destino = numero
+      ? './detalhes-chamado.html?' + new URLSearchParams({ numero })
+      : './meus-chamados.html';
+    window.location.replace(destino);
+  </script>
+</head>
+<body>
+  <a href="./meus-chamados.html">Abrir Meus chamados</a>
+</body>
+</html>

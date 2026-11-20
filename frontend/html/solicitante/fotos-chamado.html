@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fotos do chamado | Zela</title>
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/inicio.css">
+  <link rel="stylesheet" href="../../css/chamados.css">
+  <script src="../../js/chamados.js" defer></script>
+  <script src="../../js/registros.js" defer></script>
+  <script src="../../js/equipes.js" defer></script>
+  <script src="../../js/chamado-ui.js" defer></script>
+  <script src="../../js/solicitante.js" defer></script>
+</head>
+<body class="request-subpage photos-page">
+  <header class="detail-header">
+    <div class="container ticket-page">
+      <a id="voltar-pagina" href="./meus-chamados.html" aria-label="Voltar ao chamado">←</a>
+      <span>Fotos do chamado</span>
+    </div>
+  </header>
+  <main class="container home ticket-page requester-page">
+    <div data-chamado hidden>
+      <h1>Imagens da manutenção</h1>
+      <p class="ticket-intro">Veja as imagens anexadas ao chamado.</p>
+      <section class="detail-panel" id="anexos-chamado" aria-label="Imagens do chamado"></section>
+      <a class="request-primary request-primary--secondary" href="./detalhes-chamado.html" data-destino>Voltar ao chamado</a>
+    </div>
+    <p id="chamado-ausente" hidden>Chamado não encontrado.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detalhes do chamado | Zela</title>
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/inicio.css">
+  <link rel="stylesheet" href="../../css/chamados.css">
+  <script src="../../js/chamados.js" defer></script>
+  <script src="../../js/registros.js" defer></script>
+  <script src="../../js/equipes.js" defer></script>
+  <script src="../../js/chamado-ui.js" defer></script>
+  <script src="../../js/acompanhar.js" defer></script>
+</head>
+<body class="request-subpage ticket-detail">
+  <header class="detail-header">
+    <div class="container ticket-page">
+      <a href="./meus-chamados.html" aria-label="Voltar aos chamados">←</a>
+      <span>Detalhes do chamado</span>
+    </div>
+  </header>
+  <main class="container home ticket-page requester-page" id="detalhes-chamado">
+    <article id="chamado-encontrado" hidden>
+      <div class="detail-panel ticket-detail__summary">
+        <img class="ticket-detail__illustration" id="ilustracao-estado" width="640" height="460" alt="" hidden>
+        <p class="ticket-number" id="numero-chamado"></p>
+        <h1 id="titulo-chamado"></h1>
+        <p class="status" id="estado-chamado"></p>
+      </div>
+      <section class="detail-panel ticket-detail__info">
+        <h2>Informações</h2>
+        <p>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span class="visually-hidden">Local: </span><span id="local-chamado"></span>
+        </p>
+        <p>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v1"/></svg>
+          <span class="visually-hidden">Responsável: </span><span id="responsavel-chamado"></span>
+        </p>
+      </section>
+      <section class="detail-panel">
+        <h2>Descrição</h2>
+        <p id="descricao-chamado"></p>
+      </section>
+      <section class="detail-panel" id="conclusao-chamado" hidden>
+        <h2>Conclusão do serviço</h2>
+        <p id="nota-conclusao"></p>
+      </section>
+      <section class="ticket-detail__history">
+        <h2>Histórico</h2>
+        <div id="historico-chamado"></div>
+      </section>
+      <a class="request-secondary ticket-detail__chat" href="./fotos-chamado.html" data-destino>Ver fotos do chamado</a>
+      <a class="request-primary ticket-detail__chat" href="./comentarios-chamado.html" data-destino>Ver chat</a>
+    </article>
+    <h1 id="chamado-ausente" hidden>Chamado não encontrado</h1>
+  </main>
+</body>
+</html>

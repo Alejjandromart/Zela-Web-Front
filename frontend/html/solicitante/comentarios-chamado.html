@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comentários | Zela</title>
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/inicio.css">
+  <link rel="stylesheet" href="../../css/chamados.css">
+  <script src="../../js/chamados.js" defer></script>
+  <script src="../../js/registros.js" defer></script>
+  <script src="../../js/equipes.js" defer></script>
+  <script src="../../js/chamado-ui.js" defer></script>
+  <script src="../../js/solicitante.js" defer></script>
+</head>
+<body class="request-subpage comments-page">
+  <header class="detail-header">
+    <div class="container ticket-page">
+      <a id="voltar-pagina" href="./meus-chamados.html" aria-label="Voltar ao chamado">←</a>
+      <span>Comentários</span>
+    </div>
+  </header>
+  <main class="container home ticket-page requester-page">
+    <div data-chamado hidden>
+      <h1>Conversa do chamado</h1>
+      <p class="ticket-intro">Solicite ou forneça informações adicionais.</p>
+      <section id="discussao-chamado" aria-label="Comentários do chamado"></section>
+    </div>
+    <p id="chamado-ausente" hidden>Chamado não encontrado.</p>
+  </main>
+</body>
+</html>
