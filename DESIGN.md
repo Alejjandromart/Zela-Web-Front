@@ -51,10 +51,10 @@ Spacing uses the `--space-*` tokens in `frontend/css/tokens.css`, based on a 4px
 
 ### Request card (`.request-card`)
 
-- **Structure**: link with icon, title, and supporting text.
+- **Structure**: link with icon, title, supporting text and a decorative illustration anchored inside the top-right corner.
 - **Variants**: one primary request action.
-- **Spacing**: token-based padding and gaps.
-- **States**: default, hover and visible keyboard focus.
+- **Spacing**: token-based padding and gaps. The illustration is capped at 38% of the card width and 8rem, preserves its aspect ratio and stays out of document flow. The icon reserves `--space-8` below it so text clears the illustration on narrow screens.
+- **States**: default, hover and visible keyboard focus. Link text inherits the component colors, without browser-default underlining.
 - **Accessibility**: native link semantics and a text label.
 - **Motion**: none.
 
