@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="460" viewBox="0 0 640 460" role="img" aria-labelledby="title desc" xml:lang="pt-BR">
+  <title id="title">Chamado enviado</title>
+  <desc id="desc">Foguete azul com um visto na janela decola com um rastro curto.</desc>
+  <defs>
+    <linearGradient id="halo" x2=".82" y2="1">
+      <stop stop-color="#F0F6FF"/><stop offset="1" stop-color="#D7E6FF"/>
+    </linearGradient>
+    <linearGradient id="paper" x2=".7" y2="1">
+      <stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#E7F0FF"/>
+    </linearGradient>
+    <linearGradient id="accent" x2=".7" y2="1">
+      <stop stop-color="#A9CCFF"/><stop offset="1" stop-color="#76ACFF"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-35%" width="180%" height="185%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#1D5FDB" flood-opacity=".15"/>
+    </filter>
+  </defs>
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      .lift { animation: lift 950ms cubic-bezier(.2,.75,.28,1) both; }
+      .drop { animation: drop 920ms cubic-bezier(.22,.7,.32,1) both; }
+      .slide { animation: slide 700ms cubic-bezier(.22,.7,.32,1) both; }
+      .tick { animation: tick 960ms cubic-bezier(.22,.7,.32,1) both; }
+      .draw { animation: draw 600ms ease-out both; }
+      .bloom { animation: bloom 700ms cubic-bezier(.22,.7,.32,1) both; }
+      .fade { animation: fade 700ms ease-out both; }
+      .turn { animation: turn 950ms cubic-bezier(.22,.7,.32,1) both; }
+      .d1 { animation-delay: 120ms; }
+      .d2 { animation-delay: 240ms; }
+      .d3 { animation-delay: 360ms; }
+      .d4 { animation-delay: 480ms; }
+    }
+    @keyframes lift {
+      from { transform: translateY(26px); opacity: .25; }
+      67% { transform: translateY(-7px); opacity: 1; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes drop {
+      from { transform: translateY(-29px); opacity: .2; }
+      70% { transform: translateY(5px); opacity: 1; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes slide {
+      from { transform: translateY(19px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes tick {
+      from { transform: rotate(-100deg); }
+      75% { transform: rotate(9deg); }
+      to { transform: rotate(0); }
+    }
+    @keyframes draw {
+      from { stroke-dasharray: 1; stroke-dashoffset: 1; opacity: 0; }
+      12% { opacity: 1; }
+      to { stroke-dasharray: 1; stroke-dashoffset: 0; opacity: 1; }
+    }
+    @keyframes bloom {
+      from { transform: scale(.7); opacity: 0; }
+      72% { transform: scale(1.04); opacity: 1; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes turn {
+      from { transform: rotate(-18deg); opacity: .3; }
+      70% { transform: rotate(4deg); opacity: 1; }
+      to { transform: rotate(0); opacity: 1; }
+    }
+  </style>
+  <path d="M320 52c115 0 193 74 193 173s-77 169-193 169-193-68-193-169S205 52 320 52Z" fill="url(#halo)"/>
+  <ellipse cx="320" cy="386" rx="144" ry="13" fill="#ADCFFF" opacity=".34"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+<g fill="none" stroke="#8FB9FA" stroke-width="4">
+  <circle cx="154" cy="168" r="8"/>
+  <path d="M472 130v22m-11-11h22M468 286v16m-8-8h16"/>
+</g>
+<path class="fade d2" d="M252 354c-6 15-21 25-41 29m174-29c6 15 21 25 41 29M320 352v23" fill="none" stroke="#9CC4FF" stroke-width="5"/>
+<g class="lift">
+  <g filter="url(#shadow)">
+    <path d="M304 306c0 18 5 28 16 42 11-14 16-24 16-42Z" fill="#7AAFFF"/>
+    <path d="M278 224c-22 8-35 29-36 60l40-17m80-43c22 8 35 29 36 60l-40-17" fill="url(#accent)" stroke="#1D5FDB" stroke-width="6"/>
+    <path d="M295 282h50l-9 27h-32Z" fill="#D7E6FF" stroke="#1D5FDB" stroke-width="6"/>
+    <path d="M320 94c-38 30-62 83-57 137 2 25 11 46 23 59h68c12-13 21-34 23-59 5-54-19-107-57-137Z" fill="url(#paper)" stroke="#1D5FDB" stroke-width="6"/>
+    <path d="M291 145c16 6 42 6 58 0" fill="none" stroke="#ABCFFF" stroke-width="6"/>
+    <circle cx="320" cy="211" r="32" fill="#D7E6FF" stroke="#ABCFFF" stroke-width="4"/>
+    <path class="draw d2" pathLength="1" d="m305 211 10 10 19-22" fill="none" stroke="#1D5FDB" stroke-width="7"/>
+  </g>
+</g>
+  </g>
+</svg>

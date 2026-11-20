@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="460" viewBox="0 0 640 460" role="img" aria-labelledby="title desc" xml:lang="pt-BR">
+  <title id="title">Erro ao enviar</title>
+  <desc id="desc">Aviso de erro sobre um cartão de envio, com setas que indicam nova tentativa.</desc>
+  <defs>
+    <linearGradient id="halo" x2=".82" y2="1">
+      <stop stop-color="#F0F6FF"/><stop offset="1" stop-color="#D7E6FF"/>
+    </linearGradient>
+    <linearGradient id="paper" x2=".7" y2="1">
+      <stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#E7F0FF"/>
+    </linearGradient>
+    <linearGradient id="accent" x2=".7" y2="1">
+      <stop stop-color="#A9CCFF"/><stop offset="1" stop-color="#76ACFF"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-35%" width="180%" height="185%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#1D5FDB" flood-opacity=".15"/>
+    </filter>
+  </defs>
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      .lift { animation: lift 950ms cubic-bezier(.2,.75,.28,1) both; }
+      .drop { animation: drop 920ms cubic-bezier(.22,.7,.32,1) both; }
+      .slide { animation: slide 700ms cubic-bezier(.22,.7,.32,1) both; }
+      .tick { animation: tick 960ms cubic-bezier(.22,.7,.32,1) both; }
+      .draw { animation: draw 600ms ease-out both; }
+      .bloom { animation: bloom 700ms cubic-bezier(.22,.7,.32,1) both; }
+      .fade { animation: fade 700ms ease-out both; }
+      .turn { animation: turn 950ms cubic-bezier(.22,.7,.32,1) both; }
+      .d1 { animation-delay: 120ms; }
+      .d2 { animation-delay: 240ms; }
+      .d3 { animation-delay: 360ms; }
+      .d4 { animation-delay: 480ms; }
+    }
+    @keyframes lift {
+      from { transform: translateY(26px); opacity: .25; }
+      67% { transform: translateY(-7px); opacity: 1; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes drop {
+      from { transform: translateY(-29px); opacity: .2; }
+      70% { transform: translateY(5px); opacity: 1; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes slide {
+      from { transform: translateY(19px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes tick {
+      from { transform: rotate(-100deg); }
+      75% { transform: rotate(9deg); }
+      to { transform: rotate(0); }
+    }
+    @keyframes draw {
+      from { stroke-dasharray: 1; stroke-dashoffset: 1; opacity: 0; }
+      12% { opacity: 1; }
+      to { stroke-dasharray: 1; stroke-dashoffset: 0; opacity: 1; }
+    }
+    @keyframes bloom {
+      from { transform: scale(.7); opacity: 0; }
+      72% { transform: scale(1.04); opacity: 1; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes turn {
+      from { transform: rotate(-18deg); opacity: .3; }
+      70% { transform: rotate(4deg); opacity: 1; }
+      to { transform: rotate(0); opacity: 1; }
+    }
+  </style>
+  <path d="M320 52c115 0 193 74 193 173s-77 169-193 169-193-68-193-169S205 52 320 52Z" fill="url(#halo)"/>
+  <ellipse cx="320" cy="386" rx="144" ry="13" fill="#ADCFFF" opacity=".34"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+<path d="M174 167h23m-11-11v22m263 115h23m-11-11v22" stroke="#9CC4FF" stroke-width="4"/>
+<g filter="url(#shadow)">
+  <rect x="194" y="139" width="252" height="198" rx="27" fill="url(#paper)" stroke="#1D5FDB" stroke-width="6"/>
+  <path d="M221 181h89m-89 25h65m-65 90h198" stroke="#ADCFFF" stroke-width="7"/>
+  <path d="M285 252a35 35 0 0 1 59-22l7 8m4 12a35 35 0 0 1-59 22l-7-8M351 220v18h-18m-44 44v-18h18" fill="none" stroke="#1D5FDB" stroke-width="5"/>
+</g>
+<g transform="translate(426 153)"><g class="bloom d1">
+  <circle r="58" fill="#FCEBE8" stroke="#FFFFFF" stroke-width="7" filter="url(#shadow)"/>
+  <path d="M-4-28q4-7 8 0l29 50q4 7-4 7h-58q-8 0-4-7Z" fill="#FFFFFF" stroke="#B42318" stroke-width="4"/>
+  <path d="M0-13V6" stroke="#B42318" stroke-width="5"/>
+  <circle cy="17" r="3" fill="#B42318"/>
+</g></g>
+  </g>
+</svg>

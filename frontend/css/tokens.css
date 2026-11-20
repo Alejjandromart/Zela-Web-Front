@@ -1,0 +1,37 @@
+:root {
+  --color-primary: #2f76f6;
+  --color-primary-hover: #1d5fdb;
+  --color-primary-soft: #e7f0ff;
+  --color-background: #f0f6ff;
+  --color-background-accent: #d7e6ff;
+  --color-surface: #fff;
+  --color-border: #d6e3f7;
+  --color-text: #1e293b;
+  --color-text-secondary: #52647b;
+  --status-progress-bg: #fff3d6;
+  --status-progress-text: #8a5000;
+  --status-done-bg: #e0f7ea;
+  --status-done-text: #166534;
+  --focus-ring: var(--color-primary-hover);
+
+  --font-family: Inter, system-ui, sans-serif;
+  --font-sm: .875rem;
+  --font-md: 1rem;
+  --font-lg: 1.125rem;
+  --font-xl: 1.375rem;
+  --font-2xl: 1.75rem;
+  --font-display: 2rem;
+
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --radius-md: .75rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  --radius-pill: 999px;
+  --shadow-card: 0 4px 20px rgb(47 118 246 / 7%);
+}

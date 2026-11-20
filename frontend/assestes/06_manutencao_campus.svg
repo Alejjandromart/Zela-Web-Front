@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="460" viewBox="0 0 640 460" role="img" aria-labelledby="title desc" xml:lang="pt-BR">
+  <title id="title">Manutenção do campus</title>
+  <desc id="desc">Edifício do campus com uma chave de manutenção ao lado.</desc>
+  <defs>
+    <linearGradient id="halo" x2=".82" y2="1">
+      <stop stop-color="#F0F6FF"/><stop offset="1" stop-color="#D7E6FF"/>
+    </linearGradient>
+    <linearGradient id="paper" x2=".7" y2="1">
+      <stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#E7F0FF"/>
+    </linearGradient>
+    <linearGradient id="accent" x2=".7" y2="1">
+      <stop stop-color="#A9CCFF"/><stop offset="1" stop-color="#76ACFF"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-35%" width="180%" height="185%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#1D5FDB" flood-opacity=".15"/>
+    </filter>
+  </defs>
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      .lift { animation: lift 950ms cubic-bezier(.2,.75,.28,1) both; }
+      .drop { animation: drop 920ms cubic-bezier(.22,.7,.32,1) both; }
+      .slide { animation: slide 700ms cubic-bezier(.22,.7,.32,1) both; }
+      .tick { animation: tick 960ms cubic-bezier(.22,.7,.32,1) both; }
+      .draw { animation: draw 600ms ease-out both; }
+      .bloom { animation: bloom 700ms cubic-bezier(.22,.7,.32,1) both; }
+      .fade { animation: fade 700ms ease-out both; }
+      .turn { animation: turn 950ms cubic-bezier(.22,.7,.32,1) both; }
+      .d1 { animation-delay: 120ms; }
+      .d2 { animation-delay: 240ms; }
+      .d3 { animation-delay: 360ms; }
+      .d4 { animation-delay: 480ms; }
+    }
+    @keyframes lift {
+      from { transform: translateY(26px); opacity: .25; }
+      67% { transform: translateY(-7px); opacity: 1; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes drop {
+      from { transform: translateY(-29px); opacity: .2; }
+      70% { transform: translateY(5px); opacity: 1; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes slide {
+      from { transform: translateY(19px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes tick {
+      from { transform: rotate(-100deg); }
+      75% { transform: rotate(9deg); }
+      to { transform: rotate(0); }
+    }
+    @keyframes draw {
+      from { stroke-dasharray: 1; stroke-dashoffset: 1; opacity: 0; }
+      12% { opacity: 1; }
+      to { stroke-dasharray: 1; stroke-dashoffset: 0; opacity: 1; }
+    }
+    @keyframes bloom {
+      from { transform: scale(.7); opacity: 0; }
+      72% { transform: scale(1.04); opacity: 1; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes turn {
+      from { transform: rotate(-18deg); opacity: .3; }
+      70% { transform: rotate(4deg); opacity: 1; }
+      to { transform: rotate(0); opacity: 1; }
+    }
+  </style>
+  <path d="M320 52c115 0 193 74 193 173s-77 169-193 169-193-68-193-169S205 52 320 52Z" fill="url(#halo)"/>
+  <ellipse cx="320" cy="386" rx="144" ry="13" fill="#ADCFFF" opacity=".34"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+<path d="M165 131c5-11 17-15 27-11 6-15 28-19 38-4m190 14c10-15 26-16 40-7 5-6 15-7 22-3" fill="none" stroke="#FFFFFF" stroke-width="6"/>
+<path d="M142 355h355" stroke="#ABCFFF" stroke-width="5"/>
+<g filter="url(#shadow)">
+  <path d="M166 350V247h74v103m160 0V247h74v103" fill="#D7E6FF" stroke="#1D5FDB" stroke-width="6"/>
+  <path d="M228 351V205l92-70 92 70v146Z" fill="url(#paper)" stroke="#1D5FDB" stroke-width="6"/>
+  <path d="m214 213 106-81 106 81" fill="none" stroke="#1D5FDB" stroke-width="8"/>
+  <path d="M293 351v-56a11 11 0 0 1 11-11h32a11 11 0 0 1 11 11v56" fill="url(#accent)" stroke="#1D5FDB" stroke-width="5"/>
+  <path d="M320 290v60m-136-79h17v28h-17Zm255 0h17v28h-17Z" fill="none" stroke="#76ACFF" stroke-width="4"/>
+  <g class="fade d1" fill="#ADCFFF">
+    <rect x="253" y="226" width="30" height="34" rx="6"/><rect x="357" y="226" width="30" height="34" rx="6"/>
+    <circle cx="320" cy="202" r="17" stroke="#1D5FDB" stroke-width="4"/>
+  </g>
+</g>
+<g transform="translate(447 321)"><g class="turn d2">
+  <circle r="47" fill="#D7E6FF" stroke="#FFFFFF" stroke-width="6"/>
+  <path d="m-23 21 22-24a14 14 0 0 1 15-21l-8 9 4 9 10 2 8-9A14 14 0 0 1 7 4l-22 24q-5 5-8 0-3-3 0-7Z" fill="#FFFFFF" stroke="#1D5FDB" stroke-width="4"/>
+</g></g>
+  </g>
+</svg>
